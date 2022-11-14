@@ -24,7 +24,17 @@ export default function Contacts({ navigation }) {
       <View style={{ marginTop: 60 }}>
         <Text>Nome: Roberta Morato</Text>
         <Text>Telefone: (92) 8802-0002</Text>
-        <Text onPress={() => navigation.navigate('Information')}>
+        <Text
+          onPress={() =>
+            navigation.navigate('Information', {
+              nome: 'Roberta Morato',
+              telefone: '(92) 8802-0002',
+              endereco: 'Rua Raimundo Oliveira, numero 15',
+              profissao: 'Coordenadora',
+              email: 'roberta@coord.com',
+            })
+          }
+        >
           Information...
         </Text>
       </View>
